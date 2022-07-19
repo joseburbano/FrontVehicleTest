@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <label class="col-sm-8 col-form-label title">{{title}}</label>
+                <button class="btn btn-cancel" (click)="goCancel()">CANCELAR</button>
+                <button class="btn btn-add" (click)="createVehicle()">GUARDAR</button>
+            </div>
+        </div>
+        <div class="col-11 bg">
+            <form class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-6">
+                        <input [formControl]="vehicleForm.controls['brand']" type="text" class="form-control input"
+                            placeholder="MARCA DEL VEHICULO">
+                    </div>
+                    <div class="col-6   ">
+                        <input [formControl]="vehicleForm.controls['model']" type="text" class="form-control input"
+                            placeholder="MODELO DEL VEHICULO">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <input [formControl]="vehicleForm.controls['color']" type="text" class="form-control input"
+                            placeholder="COLOR DEL VEHICULO">
+                    </div>
+                    <div class="col-6   ">
+                        <input [formControl]="vehicleForm.controls['assigned']" type="text" class="form-control input"
+                            placeholder="ENCARGADO DEL VEHICULO">
+                    </div>
+                </div>
+                <br><br>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div class="row center">
+            <button class="btn cancel" (click)="goCancel()">CANCELAR</button> &nbsp;
+            <button class="btn add" (click)="createVehicle()">{{ title }}</button>
+        </div>
+        <br>
+    </div>
+</div>

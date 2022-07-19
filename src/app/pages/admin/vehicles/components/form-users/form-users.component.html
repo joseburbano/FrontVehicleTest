@@ -1,0 +1,110 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+        <label class="col-sm-8 col-form-label title">{{ title }}</label>
+        <button class="btn btn-cancel" (click)="goCancel()">CANCELAR</button>
+        <button class="btn btn-add" (click)="handleCreateUser()">GUARDAR</button>
+      </div>
+    </div>
+    <div class="col-11 bg">
+      <form class="needs-validation" novalidate>
+        <div class="row">
+          <div class="col-6">
+            <input
+              [formControl]="userForm.controls['name']"
+              type="text"
+              class="form-control input"
+              placeholder="NOMBRE"
+            />
+          </div>
+          <div class="col-6">
+            <input
+              [formControl]="userForm.controls['userName']"
+              type="text"
+              class="form-control input"
+              placeholder="USUARIO"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <input
+              [formControl]="userForm.controls['identifier']"
+              type="text"
+              class="form-control input"
+              placeholder="IDENTIFICADOR"
+            />
+          </div>
+          <div class="col-6">
+            <input
+              [formControl]="userForm.controls['telephone']"
+              type="number"
+              class="form-control input"
+              placeholder="TELEFONO"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <input
+              [formControl]="userForm.controls['email']"
+              type="email"
+              class="form-control input"
+              placeholder="CORREO ELECTRONICO"
+            />
+          </div>
+          <div class="col-6">
+            <input
+              [formControl]="userForm.controls['birthDate']"
+              type="date"
+              class="form-control input"
+              placeholder="FECHA DE NACIMIENTO"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <select
+              [formControl]="userForm.controls['gender']"
+              class="form-control input"
+              id="gender"
+              (change)="saveGender($event)"
+            >
+              <option hidden value="" selected>SELECCIONA GENERO...</option>
+              <option [value]="gender.id" *ngFor="let gender of genders">
+                {{ gender.name }}
+              </option>
+            </select>
+          </div>
+          <div class="col-6">
+            <input
+              [formControl]="userForm.controls['password']"
+              type="password"
+              class="form-control input"
+              placeholder="CONTRASEÑA"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <input
+              [formControl]="userForm.controls['repeatPassword']"
+              type="password"
+              class="form-control input"
+              placeholder="CONFIRMAR CONTRASEÑA"
+            />
+          </div>
+        </div>
+        <br /><br />
+      </form>
+    </div>
+    <br />
+    <br />
+    <div class="row center">
+      <button class="btn cancel" (click)="goCancel()">CANCELAR</button> &nbsp;
+      <button class="btn add" (click)="handleCreateUser()">{{ title }}</button>
+    </div>
+    <br />
+  </div>
+</div>
