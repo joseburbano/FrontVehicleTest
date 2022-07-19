@@ -108,5 +108,7 @@ export class FormUsersComponent implements OnInit {
       this.router.navigate(["./admin"])
     });
   }
-
+  goBack(){
+    this.router.navigate(["./admin"])
+  }
 }

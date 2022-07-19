@@ -3,7 +3,7 @@
     <div class="col-12">
       <div class="row">
         <label class="col-sm-8 col-form-label title">{{ title }}</label>
-        <button class="btn btn-cancel" (click)="goCancel()">CANCELAR</button>
+        <button class="btn btn-cancel" (click)="goBack()">CANCELAR</button>
         <button class="btn btn-add" (click)="handleCreateUser()">GUARDAR</button>
       </div>
     </div>
@@ -102,7 +102,7 @@
     <br />
     <br />
     <div class="row center">
-      <button class="btn cancel" (click)="goCancel()">CANCELAR</button> &nbsp;
+      <button class="btn cancel" (click)="goBack()">CANCELAR</button> &nbsp;
       <button class="btn add" (click)="handleCreateUser()">{{ title }}</button>
     </div>
     <br />
